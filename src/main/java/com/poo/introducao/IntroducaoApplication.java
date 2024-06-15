@@ -10,13 +10,8 @@ public class IntroducaoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(IntroducaoApplication.class, args);
 	
-		//System.out.println("Olá, Mundo");
-		
-		//Programa que faca a soma de 2 numeros
-		
+		Lista01.ex8(args);
 
-		
-	
 	}
 
 }
