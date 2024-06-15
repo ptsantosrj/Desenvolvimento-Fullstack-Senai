@@ -80,5 +80,24 @@ public class Lista01 {
         scanner.close();
     }
 
+    public static void ex4(String[] args) {
+        // Cria um Scanner para obter entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita e obtém o número
+        System.out.print("Digite o número: ");
+        int numero1 = scanner.nextInt();
+
+        // Calcular o antecessor e sucessor
+        int antecessor = numero1 - 1;
+        int sucessor = numero1 + 1;
+
+        // Exibe o resultado
+        System.out.println("O antecessor do numero " + numero1 + " é: " + antecessor + " e seu sucessor é: " + sucessor);
+
+        // Fecha o Scanner
+        scanner.close();
+    }
+
 
 }
