@@ -17,7 +17,6 @@ public class Lista02 {
         scanner.close();
 
     }
-
     public static void verificaNumeroPar(int numero) {
 
         Scanner scanner = new Scanner(System.in);
@@ -33,7 +32,31 @@ public class Lista02 {
     }
 
 
+    public static void ex2(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int numeroDigitado1 = scanner.nextInt();
+
+        System.out.print("Digite outro número: ");
+        int numeroDigitado2 = scanner.nextInt();
+
+        verificaNumeroMaior(numeroDigitado1, numeroDigitado2);
+        scanner.close();
+    }
+    public static void verificaNumeroMaior(int numero1, int numero2) {
+
+        if(numero1 > numero2){
+            System.out.print("O número " + numero1 + " é maior que " + numero2);
+        } else if(numero1 == numero2){
+            System.out.print("O número " + numero1 + " é igual ao número " + numero2);
+        } else {
+            System.out.print("O número " + numero1 + " é menor que " + numero2);
+        }
+       
+    }
+    
 
 
 
