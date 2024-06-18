@@ -86,7 +86,25 @@ public class Lista02 {
         }
     }
 
+    public static void ex4 (String[] args){
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Qual sua idade? ");
+        int idade = scanner.nextInt();
+
+        if(idade >= 18){
+            System.out.print("Entrada liberada ");
+        } else if (idade < 18 && idade >=16){
+            System.out.print("Somente acompanhado de um adulto ");
+        } else{
+            System.out.print("Você não pode entrar ");
+
+        }
+
+        scanner.close();
+
+    }
 
 
 
