@@ -57,6 +57,34 @@ public class Lista02 {
        
     }
     
+    public static void ex3(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bem vindo, voce tem mais que 65 anos? s ou n ");
+        String resposta1 = scanner.nextLine();
+
+        if(resposta1.equals ("s")){
+            System.out.print("Siga para a fila preferencial");
+        } else {
+            System.out.print("Voce possui alguma deficiencia? s ou n");
+            String resposta2 = scanner.nextLine();
+
+            if(resposta2.equals ("s")){
+                System.out.print("Siga para a fila preferencial");
+            } else {
+                System.out.print("Voce é gestante? s ou n");
+                String resposta3 = scanner.nextLine();
+
+                if(resposta3.equals ("s")){
+                    System.out.print("Siga para a fila preferencial");
+                } else {
+                    System.out.print("Siga para a fila comum");
+                }
+            }
+            scanner.close();
+        }
+    }
 
 
 
