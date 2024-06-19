@@ -106,6 +106,38 @@ public class Lista02 {
 
     }
 
+    public static void ex5(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Login: ");
+        String loginDigitado = scanner.nextLine();
+
+        System.out.print("Senha: ");
+        String senhaDigitada = scanner.nextLine();
+
+        verificaCredencial(loginDigitado, senhaDigitada);
+        scanner.close();
+        
+    }
+    public static void verificaCredencial(String loginDigitado, String senhaDigitada) {
+        final String login = "Patrick";
+        final String senha = "123456";
+
+        if(loginDigitado.equals(login) && senhaDigitada.equals(senha)){
+            System.out.print("Bem vindo, " + login);
+        } else {
+            if(!loginDigitado .equals(login) && !senhaDigitada.equals(senha)){
+                System.out.print("Login e senha errados!");
+            } else if (!senhaDigitada.equals(senha)){
+                System.out.print("Senha errada!");
+            } else {
+                System.out.print("Login errado!");
+            }
+        }
+    }
+
+
 
 
 }
