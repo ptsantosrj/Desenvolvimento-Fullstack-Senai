@@ -171,7 +171,6 @@ public class Lista02 {
         scanner.close();
     }
 
-
     public static void ex7(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -195,6 +194,82 @@ public class Lista02 {
 
         scanner.close();
     }
+
+    public static void ex8(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int chances = 3; 
+
+        // Primeira pergunta
+        System.out.println("Quem descobriu o Brasil?");
+        System.out.println("1) Pedro Vieira");
+        System.out.println("2) Pedro Álvares Cabral");
+        System.out.println("3) Pedro Santos");
+        int resposta1 = scanner.nextInt();
+
+        if (resposta1 != 2) {
+            chances--;
+        }
+
+        // Segunda pergunta
+        System.out.println("Que time conquistou a Libertadores de 2000?");
+        System.out.println("1) Flamengo");
+        System.out.println("2) Vasco");
+        System.out.println("3) Nenhuma das anteriores");
+        int resposta2 = scanner.nextInt();
+
+        if (resposta2 != 2) {
+            chances--;
+        }
+
+        // Terceira pergunta
+        System.out.println("Qual o maior artilheiro do Brasileirão de todos os tempos?");
+        System.out.println("1) Zico");
+        System.out.println("2) Roberto Dinamite");
+        System.out.println("3) Nenhuma das anteriores");
+        int resposta3 = scanner.nextInt();
+
+        if (resposta3 != 2) {
+            chances--;
+        }
+
+        // Quarta pergunta
+        System.out.println("Quais são as cores primárias?");
+        System.out.println("1) Azul, verde e roxo");
+        System.out.println("2) Azul, vermelho e amarelo");
+        System.out.println("3) Nenhuma das anteriores");
+        int resposta4 = scanner.nextInt();
+
+        if (resposta4 != 2) {
+            chances--;
+        }
+
+        // Verificação final
+        if (chances == 0) {
+            System.out.println("Você perdeu!");
+        } else {
+            // Quinta pergunta
+            System.out.println("Quem foi a primeira pessoa a pisar na lua?");
+            System.out.println("1) Yuri Gagarin");
+            System.out.println("2) Neil Armstrong");
+            System.out.println("3) Nenhuma das anteriores");
+            int resposta5 = scanner.nextInt();
+
+            // Verifica se errou a última pergunta
+            if (resposta5 != 2) {
+                chances--;
+            }
+
+            // Verifica se ainda tem chances ou perdeu
+            if (chances == 0) {
+                System.out.println("Você perdeu!");
+            } else {
+                System.out.println("Parabéns! Você acertou todas as perguntas!");
+            }
+        }
+
+        scanner.close();
+    }
+
 
 }
 
