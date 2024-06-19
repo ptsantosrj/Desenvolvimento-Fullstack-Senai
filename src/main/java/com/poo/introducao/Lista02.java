@@ -137,8 +137,42 @@ public class Lista02 {
         }
     }
 
+    public static void ex6(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
 
+        System.out.print("1ª Nota: ");
+        double nota1 = scanner.nextDouble();
+
+        System.out.print("2ª Nota: ");
+        double nota2 = scanner.nextDouble();
+
+        double media = (nota1 + nota2) / 2;
+
+        if (media >= 6) {
+            System.out.println("Parabéns, você foi aprovado! Média: " + media);
+        } else {
+            System.out.print("Média: " + media + " Nota de recuperação: ");
+            double recuperacao = scanner.nextDouble();
+
+            if ((nota1 > nota2) && (recuperacao > nota2)) {
+                media = (nota1 + recuperacao) / 2;
+            } else if ((nota2 > nota1) && (recuperacao > nota1)) {
+                media = (nota2 + recuperacao) / 2;
+            }
+
+            if (media >= 6) {
+                System.out.println("Parabéns, você foi aprovado! Média: " + media);
+            } else {
+                System.out.println("Reprovado! Média: " + media);
+            }
+        }
+
+        scanner.close();
+    }
+
+
+    
 
 }
 
