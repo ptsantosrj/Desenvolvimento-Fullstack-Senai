@@ -172,7 +172,29 @@ public class Lista02 {
     }
 
 
-    
+    public static void ex7(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int dividendo, divisor;
+        double resto, resultado;
+
+        System.out.print("Insira um número para dividirmos: ");
+        dividendo = scanner.nextInt();
+
+        System.out.print("Insira o divisor: ");
+        divisor = scanner.nextInt();
+
+        resto = dividendo % divisor;
+        resultado = (double) dividendo / divisor; // Cast para garantir a divisão real
+
+        if (resto == 0) {
+            System.out.println(dividendo + " é divisível por " + divisor);
+        } else {
+            System.out.println("Não é possível dividir " + dividendo + " por " + divisor + ". O resultado seria: " + resultado);
+        }
+
+        scanner.close();
+    }
 
 }
 
