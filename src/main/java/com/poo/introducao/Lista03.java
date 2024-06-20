@@ -88,6 +88,45 @@ public class Lista03 {
 
     }
 
+    public static void ex4(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Jogo da adivinhação!");
+        System.out.print("Peça alguem para escolher um número inteiro entre 1 e 100: ");
+        int numeroSecreto = scanner.nextInt();
+
+        System.out.println("\nPeça para alguem tentar adivinhar!");
+
+        boolean acertou = false;
+        int tentativas = 0;
+
+        while (!acertou) {
+            System.out.print("Digite seu palpite: ");
+            int palpite = scanner.nextInt();
+            tentativas++;
+
+            if (palpite < numeroSecreto) {
+                System.out.println("Muito baixo!");
+            } else if (palpite > numeroSecreto) {
+                System.out.println("Muito alto!");
+            } else {
+                acertou = true;
+            }
+
+            // Dica adicional
+            if (!acertou) {
+                if (Math.abs(numeroSecreto - palpite) <= 5) {
+                    System.out.println("Está quase lá!");
+                } else {
+                    System.out.println("Tá longe!");
+                }
+            }
+        }
+
+        System.out.println("\nParabéns! Você acertou o número " + numeroSecreto + " em " + tentativas + " tentativas.");
+        scanner.close();
+
+    }
         
 }
