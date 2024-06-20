@@ -129,4 +129,46 @@ public class Lista03 {
 
     }
         
+    public static void ex5(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String loginCorreto = "patrick";
+        String senhaCorreta = "12345";
+
+        int tentativasRestantes = 3;
+
+        while (tentativasRestantes > 0) {
+
+            System.out.print("Digite o login: ");
+            String login = scanner.nextLine();
+
+            System.out.print("Digite a senha: ");
+            String senha = scanner.nextLine();
+
+            if (login.equals(loginCorreto) && senha.equals(senhaCorreta)) {
+                System.out.println("Acesso permitido! Bem-vindo, " + login + ".");
+                break;
+            } else {
+                tentativasRestantes--;
+
+                if (tentativasRestantes > 0) {
+                    System.out.println("Credenciais incorretas! Tentativas restantes: " + tentativasRestantes);
+                } else {
+                    System.out.println("Última tentativa! Mais um erro e seu acesso será bloqueado!");
+                }
+            }
+        }
+
+        if (tentativasRestantes == 0) {
+            System.out.println("Acesso bloqueado! Entre em contato com o suporte.");
+        }
+
+        scanner.close();
+
+    }
+
+
+
+    
 }
