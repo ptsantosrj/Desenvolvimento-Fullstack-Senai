@@ -168,7 +168,32 @@ public class Lista03 {
 
     }
 
+    public static void ex6(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o número de andares da pirâmide: ");
+        int numeroAltura = scanner.nextInt();
+
+        // Loop para desenhar cada andar da pirâmide
+        for (int i = 1; i <= numeroAltura; i++) {
+            // Espaços em branco à esquerda para centralizar a pirâmide
+            for (int j = 1; j <= numeroAltura - i; j++) {
+                System.out.print(" ");
+            }
+            
+            // Asteriscos para formar os andares da pirâmide
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+
+            // Quebra de linha após cada andar
+            System.out.println();
+        }
+
+        scanner.close();
+
+    }
 
     
 }
