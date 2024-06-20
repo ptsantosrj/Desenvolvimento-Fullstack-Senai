@@ -78,7 +78,7 @@ public class Lista03 {
         int menor = Math.min(num1, num2);
         int maior = Math.max(num1, num2);
 
-        System.out.println("\nNúmeros pares entre " + menor + " e " + maior + ":");
+        System.out.println("\nNúmeros pares entre " + menor + " e  " + maior + ":");
 
         for (int i = menor; i <= maior; i++) {
             if (i % 2 == 0) {
