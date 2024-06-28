@@ -1,5 +1,8 @@
 package com.poo.introducao;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -179,7 +182,107 @@ public class Lista04 {
 
     }
 
+    static void ex8() {
 
+        ArrayList<String> listaDeCompras = new ArrayList<>();
+        ArrayList<Double> listaDePrecos = new ArrayList<>();
+        boolean menu = true;
+        int opcao;
+        String inserirItem;
+        double inserirPreco;
+        int removerItem;
+
+        while (menu) {
+
+            System.out.println("""
+                    ====== Menu ======
+                    1 . Adicionar item
+                    2 - Ver lista
+                    3 - Remover um item
+                    4 - Exibir a lista ordenada pelo preço
+                    5 - Sair
+                    """);
+
+            Scanner scanner = new Scanner(System.in);;
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+
+                    System.out.println("Digite o nome do item que deseja inserir:");
+                    inserirItem = scanner.next();
+                    listaDeCompras.add(inserirItem);
+
+                    System.out.println("Adicione o preço do item: ");
+                    inserirPreco = scanner.nextDouble();
+                    listaDePrecos.add(inserirPreco);
+
+                    break;
+
+                case 2:
+
+                    System.out.println("====== Lista de compras ======");
+
+                    for (int i = 0; i < listaDeCompras.size(); i++) {
+                        System.out
+                                .println((i + 1) + " " + listaDeCompras.get(i) + " - " + listaDePrecos.get(i) + " R$");
+                    }
+                    break;
+                case 3:
+
+                    System.out.println("====== Lista de compras ======");
+
+                    for (int i = 0; i < listaDeCompras.size(); i++) {
+                        System.out
+                                .println((i + 1) + " " + listaDeCompras.get(i) + " - " + listaDePrecos.get(i) + " R$");
+                    }
+
+                    System.out.println("Digite o numero do item que deseja remover: ");
+                    removerItem = scanner.nextInt() - 1;
+
+                    listaDeCompras.remove(removerItem);
+                    listaDePrecos.remove(removerItem);
+                    break;
+
+                case 4:
+
+                    if (listaDeCompras.isEmpty()) {
+                        System.out.println("Lista de compras vazia");
+                    } else {
+                        ArrayList<Integer> indices = new ArrayList<>();
+
+                        for (int i = 0; i < listaDeCompras.size(); i++) {
+                            indices.add(i);
+                        }
+
+                        Collections.sort(indices, new Comparator<Integer>() {
+
+                            @Override
+
+                            public int compare(Integer i1, Integer i2) {
+                                return Double.compare(listaDePrecos.get(i1), listaDePrecos.get(i2));
+                            }
+                        });
+
+                        System.out.println("====== Lista de compras por preco ======");
+                        for (int i : indices) {
+                            System.out
+                                    .println((i + 1) + " - " + listaDeCompras.get(i) + " - R$ " + listaDePrecos.get(i));
+                        }
+                    }
+                    break;
+
+                case 5:
+
+                    menu = false;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+    }
 
 
 
