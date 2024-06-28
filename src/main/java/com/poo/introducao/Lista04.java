@@ -57,7 +57,15 @@ public class Lista04 {
         return numeroMenor;
     }
 
+    static void ex3() {
+        // Ticket médio
+        // Total das vendas / Quantidade de vendas
+        // ex1 / vendas.lenght
+        double ticketMedio;
+        ticketMedio = ex1()/vendas.length;
 
+        System.out.println("O ticket médio é: R$" + String.format("%.2f",ticketMedio)) ;
+    }
 
 
 
