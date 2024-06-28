@@ -1,13 +1,14 @@
 package com.poo.introducao;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Lista04 {
 
-    public static double[] vendas = {125.50, 30.11, 50.00, 25.25, 67.35};
+    static double[] vendas = {125.50, 30.11, 50.00, 25.25, 67.35};
 
-    String[] lista = {"Queijo", "Presunto", "Farofa", "Cajuína", "Guaraná Pureza"};
-    double[] precos = {10.5, 4.25, 1.5, 10, 4.99};
+    static String[] lista = {"Queijo", "Presunto", "Farofa", "Cajuína", "Guaraná Pureza"};
+    static double[] precos = {10.5, 4.25, 1.5, 10, 4.99};
 
     static double ex1() {
         // Fechamento do dia do mercado
@@ -78,6 +79,53 @@ public class Lista04 {
             }
         }
     }
+
+    static void ex5() {
+        Scanner sc = new Scanner(System.in);
+        Scanner scs = new Scanner(System.in);
+
+        HashSet<String> mercado = new HashSet<String>();
+
+        mercado.add("pão");
+        mercado.add("leite");
+        mercado.add("manteiga");
+
+        while(true){
+        System.out.println("-- MENU --");
+        System.out.println("1. Ver lista");
+        System.out.println("2. Adicionar item");
+        System.out.println("3. Sair");
+        System.out.println("Pressione o número da opção desejada.");
+        int resposta = sc.nextInt();
+
+        if(resposta == 1){
+            System.out.println(mercado);
+
+        }else if (resposta ==2){
+            System.out.println("Adicione um item: ");
+            String item = scs.next();
+            mercado.add(item);
+            System.out.println("Sua lista de mercado agora é: " + mercado);
+
+        }else if (resposta ==3){
+            System.out.println("Saindo...");
+            break;
+
+        }else{
+            System.out.println("Digite um número válido");
+        }
+        }   
+    }
+
+
+    
+
+
+
+
+
+
+
 
 
 }
