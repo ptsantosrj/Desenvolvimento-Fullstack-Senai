@@ -67,7 +67,17 @@ public class Lista04 {
         System.out.println("O ticket médio é: R$" + String.format("%.2f",ticketMedio)) ;
     }
 
+    static void ex4() {
+        // Número pares da lista
 
+        int[] lista = {3,5,6,7,8,10,22,55,110};
+
+        for(int num : lista) {
+            if( (num%2) == 0 ){
+                System.out.print(num + " ");
+            }
+        }
+    }
 
 
 }
