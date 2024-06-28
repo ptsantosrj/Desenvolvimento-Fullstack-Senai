@@ -117,7 +117,53 @@ public class Lista04 {
         }   
     }
 
+    static void ex6(){
 
+        Scanner sc = new Scanner(System.in);
+        Scanner scs = new Scanner(System.in);
+
+        HashSet<String> mercado = new HashSet<String>();
+
+        mercado.add("pão");
+        mercado.add("leite");
+        mercado.add("manteiga");
+        mercado.add("pão");
+        
+        while(true){
+        System.out.println("-- MENU --");
+        System.out.println("1. Ver lista");
+        System.out.println("2. Adicionar item");
+        System.out.println("3. Remover item");
+        System.out.println("4. Sair");
+        System.out.println("Pressione o número da opção desejada.");
+        int resposta = sc.nextInt();
+
+        if(resposta == 1){
+            System.out.println(mercado);
+           
+        }else if (resposta ==2){
+            System.out.println("Adicione um item: ");
+            String item = scs.next();
+            mercado.add(item);
+            System.out.println("Sua lista de mercado agora é: " + mercado);
+            
+        }else if (resposta ==3){
+            System.out.println(mercado);
+            System.out.println("Qual item deseja remover?");
+            String remover = scs.next();
+            mercado.remove(remover);
+            System.out.println("Sua lista agora é:" + mercado);
+
+        }else if (resposta ==4){
+            System.out.println("Saindo...");
+            break;
+
+        }else{
+            System.out.println("Digite um número válido");
+        }
+       
+      }
+    }
     
 
 
