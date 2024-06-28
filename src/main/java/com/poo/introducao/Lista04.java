@@ -32,7 +32,30 @@ public class Lista04 {
         return resultado;
     }
 
-
+    static void ex2() {
+        // Identificar a de menor e maior valor
+        
+        System.out.println("A maior venda foi: R$" + identificaNumeroMaior(vendas));
+        System.out.println("A menor venda foi: R$" + identificaNumeroMenor(vendas));
+    }
+    static double identificaNumeroMaior(double[] lista){
+        double numeroMaior = 0;
+        for(double item : lista) {
+            if(item > numeroMaior) {
+                numeroMaior = item;
+            }
+        }
+        return numeroMaior;
+    }
+    static double identificaNumeroMenor(double[] lista){
+        double numeroMenor = 0;
+        for(double item : lista) {
+            if(item < numeroMenor) {
+                numeroMenor = item;
+            }
+        }
+        return numeroMenor;
+    }
 
 
 
