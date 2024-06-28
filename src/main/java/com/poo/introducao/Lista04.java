@@ -1,5 +1,6 @@
 package com.poo.introducao;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -165,7 +166,18 @@ public class Lista04 {
       }
     }
     
+    static void ex7(){
 
+        HashMap<String, Double > mercado = new HashMap<String, Double>();
+
+        mercado.put("pão", 5.99);
+        mercado.put("leite", 4.20);
+        mercado.put("manteiga", 10.10);
+
+        System.out.println("Sua lista é: " +  mercado);
+
+
+    }
 
 
 
